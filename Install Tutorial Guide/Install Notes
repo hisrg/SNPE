@@ -1,0 +1,31 @@
+本文介绍了在Docker环境下安装高通SNPE SDK的步骤，并且示范如何运行第一个基于Tensorflow Inceptionv3神经网络模型，环境配置如下：
+This article introduce how to install SNPE SDK in Docker, and how to run inceptionv3 neural network in Tensorflow, Envornment configuration as below:
+  1.Ubuntu18.04 LTS for Docker
+  2.Python 3.6
+  3.Tensorflow 2.0
+  4.Andorid-NDK-r17c
+  5.Docker latest version
+为了方便大家下载和安装（有些东西需要到墙外下载）,现已经打包我的百度网盘：
+  链接：https://pan.baidu.com/s/1Bd7IZQ0cXNiZHFWsOs8Nag 
+  提取码：yn7u
+
+具体安装步骤如下：
+1.Docker image:docker pull duruo850/ubuntu18.04-python3.6
+2.sudo not found: apt-get update, apt-get install sudo
+3.Curl not found:  sudo apt-get update, sudo apt-get install curl
+4.Zip not found: sudo apt-get install zip
+5.Source not found: sudo dpkg-reconfigure dash
+6.Download android ndk: https://developer.android.google.cn/ndk/downloads/older_releases#ndk-17c-downloads
+7.Unizp android ndk
+8.Sudo vim /etc/profile
+9.Add variable: 
+  export ANDROID_NDK=/home/cxg/android/ndk/android-ndk-r10e
+  export PATH=$ANDROID_NDK:$PATH
+10.Source /etc/profile
+11.echo $ANDROID_NDK
+12.source /usr/snpe-1.50.0.2622/bin/envsetup.sh -t /usr/local/lib/python3.6/dist-packages/tensorflow
+13.Install tutorial: python $SNPE_ROOT/models/inception_v3/scripts/setup_inceptionv3.py -a ~/tmpdir -d
+14.PIL not found: pip install pillow
+15.Run tutorial: cd $SNPE_ROOT/models/inception_v3
+16.snpe-net-run --container dlc/inception_v3_quantized.dlc --input_list data/cropped/raw_list.txt
+17.python3 $SNPE_ROOT/models/inception_v3/scripts/show_inceptionv3_classifications.py -i data/cropped/raw_list.txt                                                                        -o output                                                                                 -l data/imagenet_slim_labels.txt
