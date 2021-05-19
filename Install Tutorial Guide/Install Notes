@@ -28,4 +28,6 @@ This article introduce how to install SNPE SDK in Docker, and how to run incepti
 14.PIL not found: pip install pillow
 15.Run tutorial: cd $SNPE_ROOT/models/inception_v3
 16.snpe-net-run --container dlc/inception_v3_quantized.dlc --input_list data/cropped/raw_list.txt
-17.python3 $SNPE_ROOT/models/inception_v3/scripts/show_inceptionv3_classifications.py -i data/cropped/raw_list.txt                                                                        -o output                                                                                 -l data/imagenet_slim_labels.txt
+17.python3 $SNPE_ROOT/models/inception_v3/scripts/show_inceptionv3_classifications.py -i data/cropped/raw_list.txt -o output -l data/imagenet_slim_labels.txt
+
+若顺利进行到第17步则表示SNPE成功安装，并运行Tutorial.
