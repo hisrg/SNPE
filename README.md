@@ -7,5 +7,5 @@ Execute an arbitrarily deep neural network Execute the network on the Snapdragon
   Quantize DLC files to 8 bit fixed point for running on the Hexagon DSP 
   Debug and analyze the performance of the network with SNPE tools 
   Integrate a network into applications and other code via C++ or Java
-# This part include SNPE install, Tutorial, Example and Project
+# This part includes SNPE install, Tutorial, Example and Project
 
