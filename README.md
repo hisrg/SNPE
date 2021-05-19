@@ -8,4 +8,5 @@ Execute an arbitrarily deep neural network Execute the network on the Snapdragon
   Debug and analyze the performance of the network with SNPE tools 
   Integrate a network into applications and other code via C++ or Java
 # This part includes SNPE install, Tutorial, Example and Project
+  1. Update the Install and Totorial Guide
 
