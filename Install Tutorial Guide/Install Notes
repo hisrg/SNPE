@@ -23,11 +23,22 @@ This article introduce how to install SNPE SDK in Docker, and how to run incepti
   export PATH=$ANDROID_NDK:$PATH
 10.Source /etc/profile
 11.echo $ANDROID_NDK
-12.source /usr/snpe-1.50.0.2622/bin/envsetup.sh -t /usr/local/lib/python3.6/dist-packages/tensorflow
-13.Install tutorial: python $SNPE_ROOT/models/inception_v3/scripts/setup_inceptionv3.py -a ~/tmpdir -d
-14.PIL not found: pip install pillow
-15.Run tutorial: cd $SNPE_ROOT/models/inception_v3
-16.snpe-net-run --container dlc/inception_v3_quantized.dlc --input_list data/cropped/raw_list.txt
-17.python3 $SNPE_ROOT/models/inception_v3/scripts/show_inceptionv3_classifications.py -i data/cropped/raw_list.txt -o output -l data/imagenet_slim_labels.txt
+12. unzip snpe-1.50.0.2622.zip
+13. vi ~/.profile and add this text.
+  PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+  export SNPE_ROOT="/usr/snpe-1.50.0.2622"
+  export TENSORFLOW_DIR="/usr/local/lib/python3.6/dist-packages/tensorflow"
+  export TENSORFLOW_HOME=$TENSORFLOW_DIR
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/python3.6
+  export ANOROID_NDK_ROOT="/usr/android-ndk-r17c"
+  export PATH=$PATH:/home/snpe/AndroidSDK/platform-tools
+  export PYTHONPATH=$PYTHONPATH:$SNPE_ROOT/lib/python
+14.source ~/.profile
+15.source /usr/snpe-1.50.0.2622/bin/envsetup.sh -t /usr/local/lib/python3.6/dist-packages/tensorflow
+16.Install tutorial: python $SNPE_ROOT/models/inception_v3/scripts/setup_inceptionv3.py -a ~/tmpdir -d
+17.PIL not found: pip install pillow
+18.Run tutorial: cd $SNPE_ROOT/models/inception_v3
+19.snpe-net-run --container dlc/inception_v3_quantized.dlc --input_list data/cropped/raw_list.txt
+20.python3 $SNPE_ROOT/models/inception_v3/scripts/show_inceptionv3_classifications.py -i data/cropped/raw_list.txt -o output -l data/imagenet_slim_labels.txt
 
 若顺利进行到第17步则表示SNPE成功安装，并运行Tutorial.
