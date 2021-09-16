@@ -15,5 +15,5 @@ Execute an arbitrarily deep neural network Execute the network on the Snapdragon
   Integrate a network into applications and other code via C++ or Java
  
 # This part includes SNPE install, Tutorial, Example and Project
-  1. Update the Install and Totorial Guide, 官方安装指南:https://developer.qualcomm.com/docs/snpe/index.html
+  1. Update the Install and Totorial Guide, 官方安装指南:https://developer.qualcomm.com/docs/snpe/index.html（这个网址暂时不能访问，所有内容已经打包到SNPE.ZIP中了，欢迎访问官方发行版本）
 
