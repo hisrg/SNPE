@@ -17,3 +17,6 @@ Execute an arbitrarily deep neural network Execute the network on the Snapdragon
 # This part includes SNPE install, Tutorial, Example and Project
   1. Update the Install and Totorial Guide, 官方安装指南:https://developer.qualcomm.com/docs/snpe/index.html（这个网址暂时不能访问，所有内容已经打包到SNPE.ZIP中了，欢迎访问官方发行版本）
   2. 新版的SNPE guide 地址:https://developer.qualcomm.com/sites/default/files/docs/snpe/index.html
+
+# Hexagon DSP
+  1. Heagon DSP 入门知识: https://www.bilibili.com/video/BV1eM4y137Ez?from=search&seid=4621956615485364990&spm_id_from=333.337.0.0
